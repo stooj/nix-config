@@ -1,0 +1,1 @@
+# Stoo's NixOS configurations
