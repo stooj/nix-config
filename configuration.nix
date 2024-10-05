@@ -57,7 +57,7 @@
 
   users.users.stooj = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" ];
+    extraGroups = [ "networkmanager" "wheel" ];
   };
 
   users.users.pindy = {
