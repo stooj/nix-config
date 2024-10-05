@@ -55,15 +55,15 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.alice = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  #   packages = with pkgs; [
-  #     firefox
-  #     tree
-  #   ];
-  # };
+  users.users.stooj = {
+    isNormalUser = true;
+    extraGroups = [ "networkmanager" ];
+  };
+
+  users.users.pindy = {
+    isNormalUser = true;
+    extraGroups = [ "networkmanager" ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
