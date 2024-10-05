@@ -58,6 +58,7 @@
   users.users.stooj = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
+    openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyl2Fwnxmr3J4OOP1hsZuFzQ6XTZhLx64rRhZp44GIadJqboI5YWXGdrz4XRUHNo8kFmwwfpIdtPckpVY3Yd4ksHCALofSUWCuQZy2/qX4WYwq7U7/QHfmFm41ZxFJz9eTxieVLTFBak/XCOXjAMpaqlnf7B8NmgLEd6Uv6k5Zi9UWXL86yztalsdh/aghWutv3QFqQVOv0vvuO0P6d7wFSqnh2SHZatyXFECLK6HR7KnD+7UA85DWeRSOYrSMLs5U8QE01SKtUReqTt4qiULLN7/oKEehf4wh7E5zCU5SlvDuMQiQKR0RogW9O/duhmGwtXAAUj71iDkwvnKM73PVHgX5cVJm30I5CSMwDZ4JB6Lj+lQN1Bf23hNIM0l7pSbGvCVX6Ok3gE7o+WM1iRZNEj5WowPfNRqZDMqdgCV3ffs7uNfbw4cZnHvE9/UXHT6vmAlgxzH54LMd7lJ5gEAfWpBGheJnstEduVU1+14HbcQmdk7d+7g8FOVSpjKg2R9tCv1uD7fYdGudTX4IP1gV5k9yMXV0cYOCb3wkJETBBfQ48uaPIlKfOsHuy7lVYQelPFAk8m/uoEBjMvxEAa/VJDzhmC+mUNnir6okHqwxojZqEw0x9X/9AwSTvR6HFE2KE/z45aeEBS4iLpgVYDZCGsAU/4wQbJXMj/ot4AtA3w== stooj@nanokey5" ];
   };
 
   users.users.pindy = {
@@ -79,8 +80,7 @@
 
   # List services that you want to enable:
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
