@@ -2,6 +2,10 @@
   description = "A simple NixOS flake";
 
   inputs = {
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
