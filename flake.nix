@@ -9,10 +9,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, disko, ... }@inputs: {
     nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        disko.nixosModules.disko
         ./configuration.nix
       ];
     };
