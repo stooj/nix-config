@@ -1,0 +1,8 @@
+{
+  disko.devices = {
+    disk = {
+      nvme = {
+      };
+    };
+  };
+}
