@@ -29,6 +29,10 @@
         };
       };
     };
-    lvm_vg = {};
+    lvm_vg = {
+      ginstoo = {
+        type = "lvm_vg";
+      };
+    };
   };
 }
