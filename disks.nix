@@ -32,6 +32,15 @@
     lvm_vg = {
       ginstoo = {
         type = "lvm_vg";
+        lvs = {
+          swap = {
+            size = "16G";
+            content = {
+              type = "swap";
+              resumeDevice = true;
+            };
+          };
+        };
       };
     };
   };
