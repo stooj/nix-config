@@ -51,6 +51,14 @@
               ];
             };
           };
+          home = {
+            size = "100%FREE";
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              mountpoint = "/home";
+            };
+          };
         };
       };
     };
