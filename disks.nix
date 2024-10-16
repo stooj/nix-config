@@ -40,6 +40,17 @@
               resumeDevice = true;
             };
           };
+          root = {
+            size = "160G";
+            content = {
+              type = "filesystem";
+              format = "ext4";
+              mountpoint = "/";
+              mountOptions = [
+                "defaults"
+              ];
+            };
+          };
         };
       };
     };
