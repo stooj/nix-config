@@ -10,6 +10,7 @@
             efi = {
               name = "efi";
               label = "efi";
+              start = "1M";
               size = "1G";
               type = "EF00";
               content = {
