@@ -9,6 +9,7 @@
           partitions = {
             efi = {
               name = "efi";
+              label = "efi";
               size = "1G";
               type = "EF00";
               content = {
