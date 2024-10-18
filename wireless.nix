@@ -4,7 +4,6 @@
       DIGIFIBRA-PLUS-YkPe = {
         connection = {
           id = "DIGIFIBRA-PLUS-YkPe";
-          interface-name = "wlp0s20f3";
           type = "wifi";
           uuid = "a7f75602-e5ce-464f-8b50-2e459b0be9a7";
         };
