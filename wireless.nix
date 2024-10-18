@@ -1,7 +1,7 @@
 {...}: {
   networking.networkmanager.ensureProfiles = {
     profiles = {
-      DIGIFIBRA-PLUS-YkPe = {
+      rental-flat = {
         connection = {
           id = "DIGIFIBRA-PLUS-YkPe";
           type = "wifi";
