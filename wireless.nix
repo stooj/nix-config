@@ -5,7 +5,6 @@
         connection = {
           id = "DIGIFIBRA-PLUS-YkPe";
           type = "wifi";
-          uuid = "a7f75602-e5ce-464f-8b50-2e459b0be9a7";
         };
         ipv4 = {
           method = "auto";
