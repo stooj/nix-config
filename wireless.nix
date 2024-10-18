@@ -1,3 +1,6 @@
 {...}: {
-  networking.networkmanager.ensureProfiles = {};
+  networking.networkmanager.ensureProfiles = {
+    profiles = {
+    };
+  };
 }
