@@ -1,5 +1,5 @@
 keys:
-  - keys: &stooj_yubikey 243848098EB57DBEA8DF8000834B1ADFEC5BDC38
+  - &stooj_yubikey 243848098EB57DBEA8DF8000834B1ADFEC5BDC38
 
 creation_rules:
   - path_regex: secrets.yaml$
