@@ -1,9 +1,11 @@
 keys:
   - &stooj_yubikey 243848098EB57DBEA8DF8000834B1ADFEC5BDC38
+  - &laptop_drummer age1qeq68sn3hhh53v99xu8apz30y4zctqfhv83l8qn8ts5chjh2sdaqmwrj7m
 
 creation_rules:
   - path_regex: secrets.yaml$
     key_groups:
       - pgp:
           - *stooj_yubikey
-
+        age:
+          - *laptop_drummer
