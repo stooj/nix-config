@@ -28,7 +28,7 @@
         wifi-security = {
           auth-alg = "open";
           key-mgmt = "wpa-psk";
-          psk = "TODO: REPLACE ME WITH SECRET";
+          psk = "$RENTAL_FLAT_PSK";
         };
       };
     };
