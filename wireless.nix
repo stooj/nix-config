@@ -4,6 +4,9 @@
     RENTAL_FLAT_PSK = "${config.sops.placeholder.rental-flat-psk}"
   '';
   networking.networkmanager.ensureProfiles = {
+    environmentFiles = [
+      config.sops.templates."wireless.env".path
+    ];
     profiles = {
       rental-flat = {
         connection = {
