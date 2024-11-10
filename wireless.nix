@@ -1,4 +1,5 @@
-{...}: {
+{config, ...}: {
+  sops.secrets.rental-flat-psk = {};
   networking.networkmanager.ensureProfiles = {
     profiles = {
       rental-flat = {
