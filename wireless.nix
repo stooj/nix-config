@@ -1,5 +1,8 @@
 {config, ...}: {
   sops.secrets.rental-flat-psk = {};
+  sops.templates."wireless.env".content = ''
+    RENTAL_FLAT_PSK = "${config.sops.placeholder.rental-flat-psk}"
+  '';
   networking.networkmanager.ensureProfiles = {
     profiles = {
       rental-flat = {
