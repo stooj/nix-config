@@ -83,6 +83,11 @@
 
   services.openssh.enable = true;
 
+  # Sops configuration
+  sops = {
+    defaultSopsFile = ./secrets.yaml;
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
