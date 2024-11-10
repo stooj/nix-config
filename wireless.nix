@@ -10,7 +10,7 @@
     profiles = {
       rental-flat = {
         connection = {
-          id = "DIGIFIBRA-PLUS-YkPe";
+          id = "rental-flat";
           type = "wifi";
         };
         ipv4 = {
