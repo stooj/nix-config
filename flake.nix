@@ -13,11 +13,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, disko, ... }@inputs: {
+  outputs = { self, nixpkgs, disko, sops-nix, ... }@inputs: {
     nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         disko.nixosModules.disko
+        sops-nix.nixosModules.sops
         ./configuration.nix
       ];
     };
