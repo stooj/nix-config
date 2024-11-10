@@ -23,7 +23,7 @@
         proxy = {};
         wifi = {
           mode = "infrastructure";
-          ssid = "DIGIFIBRA-PLUS-YkPe";
+          ssid = "MIWIFI_rJdj";
         };
         wifi-security = {
           auth-alg = "open";
