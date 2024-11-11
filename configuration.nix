@@ -58,7 +58,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  sops.secrets.rootPasswordHash = {};
+  sops.secrets.rootPasswordHash = {
+    neededForUsers = true;
+  };
 
   users.users.stooj = {
     isNormalUser = true;
