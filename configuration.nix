@@ -58,6 +58,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
+  sops.secrets.rootPasswordHash = {};
+
   users.users.stooj = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
