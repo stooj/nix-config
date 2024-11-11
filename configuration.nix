@@ -62,6 +62,8 @@
     neededForUsers = true;
   };
 
+  users.users.root.hashedPasswordFile = config.sops.secrets.rootPasswordHash.path;
+
   users.users.stooj = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
