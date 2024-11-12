@@ -59,6 +59,9 @@
   # services.libinput.enable = true;
 
   sops.secrets = {
+    pindyPasswordHash = {
+      neededForUsers = true;
+    };
     rootPasswordHash = {
       neededForUsers = true;
     };
@@ -77,6 +80,7 @@
   };
 
   users.users.pindy = {
+    hashedPasswordFile = config.sops.secrets.pindyPasswordHash.path;
     isNormalUser = true;
     extraGroups = [ "networkmanager" ];
   };
