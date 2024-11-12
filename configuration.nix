@@ -70,6 +70,8 @@
     };
   };
 
+  users.mutableUsers = false;
+
   users.users.root.hashedPasswordFile = config.sops.secrets.rootPasswordHash.path;
 
   users.users.stooj = {
