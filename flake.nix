@@ -26,6 +26,8 @@
         {
           home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
+          home-manager.users.stooj = import ./stooj.nix;
+          home-manager.users.pindy = import ./pindy.nix;
         }
         sops-nix.nixosModules.sops
         ./configuration.nix
