@@ -23,6 +23,9 @@
       modules = [
         disko.nixosModules.disko
         home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+        }
         sops-nix.nixosModules.sops
         ./configuration.nix
       ];
