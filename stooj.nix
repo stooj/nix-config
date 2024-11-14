@@ -5,6 +5,12 @@
 
   programs.home-manager.enable = true;
 
+  programs.git = {
+    enable = true;
+    userEmail = "scj@stooj.org";
+    userName = "stoo johnston";
+  };
+
   programs.gpg = {
     enable = true;
     publicKeys = [
