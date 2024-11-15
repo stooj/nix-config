@@ -21,5 +21,14 @@
     ];
   };
 
+  programs.mr = {
+    enable = true;
+    settings = {
+      "code/nix/nix-config" = {
+        checkout = "git clone 'git@github.com:stooj/nix-config.git'";
+      };
+    };
+  };
+
   home.stateVersion = "24.05";
 }
