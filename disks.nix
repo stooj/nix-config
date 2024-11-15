@@ -23,8 +23,15 @@
             sys = {
               size = "100%";
               content = {
-                type = "lvm_pv";
-                vg = "ginstoo";
+                type = "luks";
+                name = "crypted";
+                settings = {
+                  allowDiscards = true;
+                };
+                content = {
+                  type = "lvm_pv";
+                  vg = "ginstoo";
+                };
               };
             };
           };
