@@ -34,11 +34,14 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+    windowManager.i3.enable = true;
+  };
 
-
-  
+  services.displayManager = {
+    defaultSession = "none+i3";
+  };
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

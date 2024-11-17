@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   home.username = "stooj";
   home.homeDirectory = "/home/stooj";
@@ -26,6 +26,18 @@
     settings = {
       "code/nix/nix-config" = {
         checkout = "git clone 'git@github.com:stooj/nix-config.git'";
+      };
+    };
+  };
+
+  xsession.windowManager.i3 = {
+    enable = true;
+    package = pkgs.i3-gaps;
+    config = {
+      modifier = "Mod4";
+      gaps = {
+        inner = 10;
+        outer = 5;
       };
     };
   };
