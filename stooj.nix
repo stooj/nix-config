@@ -55,7 +55,7 @@
           modifier = config.xsession.windowManager.i3.config.modifier;
         in {
           "Left" = "resize shrink width 10 px or 10 ppt";
-          "h" = "resize shrink width 10 px or 10 ppt";
+          "h" = "resize shrink width 50 px or 50 ppt";
           "Down" = "resize grow height 10 px or 10 ppt";
           "j" = "resize grow height 10 px or 10 ppt";
           "Up" = "resize shrink height 10 px or 10 ppt";
