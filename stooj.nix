@@ -50,6 +50,18 @@
           # {,un}pin a floating window
           "${modifier}+Shift+P" = "sticky toggle";
       };
+      modes = {
+        resize = 
+        let
+          modifier = config.xsession.windowManager.i3.config.modifier;
+        in lib.mkOptionDefault {
+          "${modifier}+r" = "mode default";
+          "h" = "resize shrink width 50 px or 50 ppt";
+          "j" = "resize grow height 50 px or 50 ppt";
+          "k" = "resize shrink height 50 px or 50 ppt";
+          "l" = "resize grow width 50 px or 50 ppt";
+        };
+      };
       modifier = "Mod4";
       gaps = {
         inner = 10;
