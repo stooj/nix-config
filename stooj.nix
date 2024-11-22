@@ -42,6 +42,7 @@
           "${modifier}+j" = "focus down";
           "${modifier}+k" = "focus up";
           "${modifier}+l" = "focus right";
+          "${modifier}+o" = "split h";
       };
       modifier = "Mod4";
       gaps = {
