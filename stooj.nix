@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, lib, ... }:
 {
   home.username = "stooj";
   home.homeDirectory = "/home/stooj";
@@ -34,6 +34,15 @@
     enable = true;
     package = pkgs.i3-gaps;
     config = {
+      keybindings =
+        let
+          modifier = config.xsession.windowManager.i3.config.modifier;
+        in lib.mkOptionDefault {
+          "${modifier}+h" = "focus left";
+          "${modifier}+j" = "focus down";
+          "${modifier}+k" = "focus up";
+          "${modifier}+l" = "focus right";
+      };
       modifier = "Mod4";
       gaps = {
         inner = 10;
