@@ -53,7 +53,7 @@
       modes = {
         resize = let
           modifier = config.xsession.windowManager.i3.config.modifier;
-        in {
+        in lib.mkOptionDefault {
           "Left" = "resize shrink width 10 px or 10 ppt";
           "h" = "resize shrink width 50 px or 50 ppt";
           "Down" = "resize grow height 10 px or 10 ppt";
