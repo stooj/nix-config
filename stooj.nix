@@ -47,6 +47,8 @@
           "${modifier}+Shift+J" = "move down";
           "${modifier}+Shift+K" = "move up";
           "${modifier}+Shift+L" = "move right";
+          # {,un}pin a floating window
+          "${modifier}+Shift+P" = "sticky toggle";
       };
       modifier = "Mod4";
       gaps = {
