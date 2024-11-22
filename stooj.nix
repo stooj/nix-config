@@ -51,7 +51,9 @@
           "${modifier}+Shift+P" = "sticky toggle";
       };
       modes = {
-        resize = {
+        resize = let
+          modifier = config.xsession.windowManager.i3.config.modifier;
+        in {
           "Left" = "resize shrink width 10 px or 10 ppt";
           "h" = "resize shrink width 10 px or 10 ppt";
           "Down" = "resize grow height 10 px or 10 ppt";
@@ -62,7 +64,7 @@
           "l" = "resize grow width 10 px or 10 ppt";
           "Escape" = "mode default";
           "Return" = "mode default";
-          "Mod4+r" = "mode default";
+          "${modifier}+r" = "mode default";
         };
       };
       modifier = "Mod4";
