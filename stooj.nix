@@ -57,11 +57,11 @@
           "Left" = "resize shrink width 10 px or 10 ppt";
           "h" = "resize shrink width 50 px or 50 ppt";
           "Down" = "resize grow height 10 px or 10 ppt";
-          "j" = "resize grow height 10 px or 10 ppt";
+          "j" = "resize grow height 50 px or 50 ppt";
           "Up" = "resize shrink height 10 px or 10 ppt";
-          "k" = "resize shrink height 10 px or 10 ppt";
+          "k" = "resize shrink height 50 px or 50 ppt";
           "Right" = "resize grow width 10 px or 10 ppt";
-          "l" = "resize grow width 10 px or 10 ppt";
+          "l" = "resize grow width 50 px or 50 ppt";
           "Escape" = "mode default";
           "Return" = "mode default";
           "${modifier}+r" = "mode default";
