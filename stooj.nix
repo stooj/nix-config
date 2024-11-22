@@ -51,15 +51,13 @@
           "${modifier}+Shift+P" = "sticky toggle";
       };
       modes = {
-        resize = 
-        let
-          modifier = config.xsession.windowManager.i3.config.modifier;
-        in lib.mkOptionDefault {
-          "${modifier}+r" = "mode default";
-          "h" = "resize shrink width 50 px or 50 ppt";
-          "j" = "resize grow height 50 px or 50 ppt";
-          "k" = "resize shrink height 50 px or 50 ppt";
-          "l" = "resize grow width 50 px or 50 ppt";
+        resize = {
+          "Left" = "resize shrink width 10 px or 10 ppt";
+          "Down" = "resize grow height 10 px or 10 ppt";
+          "Up" = "resize shrink height 10 px or 10 ppt";
+          "Right" = "resize grow width 10 px or 10 ppt";
+          "Escape" = "mode default";
+          "Return" = "mode default";
         };
       };
       modifier = "Mod4";
