@@ -62,6 +62,7 @@
           "l" = "resize grow width 10 px or 10 ppt";
           "Escape" = "mode default";
           "Return" = "mode default";
+          "Mod4+r" = "mode default";
         };
       };
       modifier = "Mod4";
