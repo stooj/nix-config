@@ -92,7 +92,13 @@
             [ "$select" = "Logout" ] && i3-msg exit
             exit 0
           ''}";
-
+          # Control notifications
+          ## Close notification
+          "Control+space" = "exec ${pkgs.dunst}/bin/dunstctl close";
+          ## Close all notification
+          "Control+Shift+space" = "exec ${pkgs.dunst}/bin/dunstctl close-all";
+          ## Show last message
+          "Control+grave" = "exec ${pkgs.dunst}/bin/dunstctl history-pop";
       };
       menu = let
         rofi = if config.programs.rofi.enable then
