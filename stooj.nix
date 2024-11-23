@@ -77,6 +77,17 @@
           # Other rofi launchers
           "${modifier}+Shift+D" = "exec ${rofi}/bin/rofi -show drun";
           "${modifier}+Shift+S" = "exec ${rofi}/bin/rofi -show emoji -modi emoji";
+          # Exit menu
+          "${modifier}+Shift+e" = "exec ${pkgs.writeShellScript "exit_menu" ''
+            #!/bin/sh
+
+            select=$(echo "Cancel|Logout|Shutdown|Reboot" | rofi -sep '|' -dmenu -i -matching fuzzy -p "Are you sure you want to logout?")
+            [ "$select" = "Cancel" ] && exit 0
+            [ "$select" = "Shutdown" ] && systemctl poweroff && exit 0
+            [ "$select" = "Reboot" ] && systemctl reboot && exit 0
+            [ "$select" = "Logout" ] && i3-msg exit
+            exit 0
+          ''}";
 
       };
       menu = let
