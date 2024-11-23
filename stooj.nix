@@ -59,6 +59,9 @@
       keybindings =
         let
           modifier = config.xsession.windowManager.i3.config.modifier;
+          rofi = if config.programs.rofi.enable then
+                    config.programs.rofi.finalPackage
+                 else pkgs.rofi;
         in lib.mkOptionDefault {
           "${modifier}+h" = "focus left";
           "${modifier}+j" = "focus down";
@@ -72,8 +75,8 @@
           # {,un}pin a floating window
           "${modifier}+Shift+P" = "sticky toggle";
           # Other rofi launchers
-          "${modifier}+Shift+D" = "exec ${pkgs.rofi}/bin/rofi -show drun";
-          "${modifier}+Shift+S" = "exec ${pkgs.rofi}/bin/rofi -show emoji -modi emoji";
+          "${modifier}+Shift+D" = "exec ${rofi}/bin/rofi -show drun";
+          "${modifier}+Shift+S" = "exec ${rofi}/bin/rofi -show emoji -modi emoji";
 
       };
       menu = "${pkgs.rofi}/bin/rofi -show run";
