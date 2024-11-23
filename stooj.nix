@@ -44,6 +44,15 @@
     enable = true;
   };
 
+  # Workaround for Failed to restart syncthingtray.service: Unit tray.target not found.
+  # - https://github.com/nix-community/home-manager/issues/2064
+  systemd.user.targets.tray = {
+    Unit = {
+      Description = "Home Manager System Tray";
+      Requires = [ "graphical-session-pre.target" ];
+    };
+  };
+
   xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
