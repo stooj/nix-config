@@ -36,7 +36,7 @@
     plugins = [ pkgs.rofi-emoji ];
   };
 
-  service.dunst = {
+  services.dunst = {
     enable = true;
   };
 
