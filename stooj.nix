@@ -79,7 +79,12 @@
           "${modifier}+Shift+S" = "exec ${rofi}/bin/rofi -show emoji -modi emoji";
 
       };
-      menu = "${pkgs.rofi}/bin/rofi -show run";
+      menu = let
+        rofi = if config.programs.rofi.enable then
+                 config.programs.rofi.finalPackage
+               else pkgs.rofi;
+        in
+          "${rofi}/bin/rofi -show run";
       modes = {
         resize = let
           modifier = config.xsession.windowManager.i3.config.modifier;
