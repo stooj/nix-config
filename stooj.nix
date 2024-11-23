@@ -71,7 +71,10 @@
           "${modifier}+Shift+L" = "move right";
           # {,un}pin a floating window
           "${modifier}+Shift+P" = "sticky toggle";
+          # Other rofi launchers
           "${modifier}+Shift+D" = "exec ${pkgs.rofi}/bin/rofi -show drun";
+          "${modifier}+Shift+S" = "exec ${pkgs.rofi}/bin/rofi -show emoji -modi emoji";
+
       };
       menu = "${pkgs.rofi}/bin/rofi -show run";
       modes = {
