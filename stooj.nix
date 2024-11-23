@@ -30,6 +30,12 @@
     };
   };
 
+  programs.rofi = {
+    enable = true;
+    location = "center";
+    plugins = [ pkgs.rofi-emoji ];
+  };
+
   xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
@@ -66,6 +72,7 @@
           # {,un}pin a floating window
           "${modifier}+Shift+P" = "sticky toggle";
       };
+      menu = "${pkgs.rofi}/bin/rofi -show run";
       modes = {
         resize = let
           modifier = config.xsession.windowManager.i3.config.modifier;
