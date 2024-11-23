@@ -49,6 +49,7 @@
           trayOutput = "primary";
         }
       ];
+      defaultWorkspace = "workspace number 1";
       keybindings =
         let
           modifier = config.xsession.windowManager.i3.config.modifier;
