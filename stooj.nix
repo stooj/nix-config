@@ -60,6 +60,7 @@
         }
       ];
       defaultWorkspace = "workspace number 1";
+      focus.followMouse = false;
       keybindings =
         let
           modifier = config.xsession.windowManager.i3.config.modifier;
