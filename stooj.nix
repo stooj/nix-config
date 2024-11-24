@@ -32,6 +32,12 @@
 
   programs.qutebrowser = {
     enable = true;
+    keyBindings = {
+      normal = {
+        "yr" = "yank inline `{title} <{url}>`_";
+        "yv" = "yank inline [[{url}|{title}]]";
+      };
+    };
   };
 
   programs.rofi = {
