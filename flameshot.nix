@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 {
   home.packages = [
-    pkgs.libnotify  # Needed for flameshot tool
+    pkgs.libnotify  # Needed for i3 delayed screenshot util function
   ];
 
   services.flameshot = {
