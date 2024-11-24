@@ -95,7 +95,6 @@
 
   environment.systemPackages = with pkgs; [
     git
-    libnotify  # Needed for flameshot tool
   ];
 
   programs.vim.defaultEditor = true;

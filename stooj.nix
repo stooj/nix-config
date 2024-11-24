@@ -1,5 +1,8 @@
 { pkgs, config, lib, ... }:
 {
+  home.packages = [
+    pkgs.libnotify  # Needed for flameshot tool
+  ];
   home.username = "stooj";
   home.homeDirectory = "/home/stooj";
 
