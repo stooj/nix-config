@@ -30,6 +30,10 @@
     };
   };
 
+  programs.qutebrowser = {
+    enable = true;
+  };
+
   programs.rofi = {
     enable = true;
     location = "center";
