@@ -132,23 +132,6 @@
           "Control+Shift+space" = "exec ${pkgs.dunst}/bin/dunstctl close-all";
           ## Show last message
           "Control+grave" = "exec ${pkgs.dunst}/bin/dunstctl history-pop";
-          # Screenshots
-          ## Screenshot of the whole screen
-          "Print" = "exec flameshot full";
-          ## Screenshot with a selection window
-          "${modifier}+Print" = "exec flameshot gui";
-          ## Screenshot with a selection window and a delay
-          "${modifier}+Shift+Print" = "exec ${pkgs.writeShellScript "delayed-screenshot-selection" ''
-            #!/bin/sh
-
-            for i in $(seq 5 -1 1); do
-              ${pkgs.libnotify}/bin/notify-send "Taking screenshot in $i"
-              sleep 1
-              ${pkgs.dunst}/bin/dunstctl close
-            done
-
-            flameshot gui
-          ''}";
       };
       menu = let
         rofi = if config.programs.rofi.enable then
