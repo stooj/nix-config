@@ -5,7 +5,7 @@
 
   programs.home-manager.enable = true;
 
-  imports = [ ./flameshot.nix ];
+  imports = [ ../common/flameshot.nix ];
 
   programs.git = {
     enable = true;
@@ -17,7 +17,7 @@
     enable = true;
     publicKeys = [
       {
-        source = keys/stooj.asc;
+        source = ../../keys/stooj.asc;
         trust = "ultimate";
       }
     ];
