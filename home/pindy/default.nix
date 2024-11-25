@@ -5,5 +5,10 @@
 
   programs.home-manager.enable = true;
 
+  imports = [
+    ../common/git.nix
+    ./git.nix
+  ];
+
   home.stateVersion = "24.05";
 }

@@ -5,13 +5,11 @@
 
   programs.home-manager.enable = true;
 
-  imports = [ ../common/flameshot.nix ];
-
-  programs.git = {
-    enable = true;
-    userEmail = "scj@stooj.org";
-    userName = "stoo johnston";
-  };
+  imports = [
+    ../common/flameshot.nix
+    ../common/git.nix
+    ./git.nix
+  ];
 
   programs.gpg = {
     enable = true;
