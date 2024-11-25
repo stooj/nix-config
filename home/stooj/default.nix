@@ -6,8 +6,7 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ../common/flameshot.nix
-    ../common/git.nix
+    ../common
     ./git.nix
   ];
 
