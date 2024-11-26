@@ -8,6 +8,7 @@
   imports = [
     ../common
     ./git.nix
+    ./readline.nix
   ];
 
   programs.gpg = {
