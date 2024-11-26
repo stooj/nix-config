@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ./bash.nix
       ./hardware-configuration.nix
       ./disks.nix
       ./wireless.nix
