@@ -8,19 +8,10 @@
   imports = [
     ../common
     ./git.nix
+    ./gpg.nix
     ./password-store.nix
     ./readline.nix
   ];
-
-  programs.gpg = {
-    enable = true;
-    publicKeys = [
-      {
-        source = ../../keys/stooj.asc;
-        trust = "ultimate";
-      }
-    ];
-  };
 
   programs.mr = {
     enable = true;
