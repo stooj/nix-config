@@ -1,0 +1,4 @@
+{ ... }:
+{
+  programs.mr.enable = true;
+}
