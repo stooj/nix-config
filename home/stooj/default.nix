@@ -8,6 +8,7 @@
   imports = [
     ../common
     ./git.nix
+    ./password-store.nix
     ./readline.nix
   ];
 
