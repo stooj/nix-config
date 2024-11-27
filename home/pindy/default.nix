@@ -8,6 +8,7 @@
   imports = [
     ../common
     ./git.nix
+    ./gpg.nix
   ];
 
   home.stateVersion = "24.05";
