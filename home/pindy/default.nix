@@ -9,6 +9,7 @@
     ../common
     ./git.nix
     ./gpg.nix
+    ./password-store.nix
   ];
 
   home.stateVersion = "24.05";
