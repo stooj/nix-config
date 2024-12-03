@@ -20,7 +20,7 @@
   };
 
   home.activation.flameshot_dir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    run mkdir --parents /tmp/foo/bar/blah
+    run mkdir --parents /tmp/foo/bar/blah/${config.home.username}
   '';
 
   # Workaround for Failed to restart syncthingtray.service: Unit tray.target not found.
