@@ -2,12 +2,9 @@
 {
 
   imports = [
+    ./dunst.nix
     ./rofi.nix
   ];
-
-  services.dunst = {
-    enable = true;
-  };
 
   xsession.windowManager.i3 = {
     enable = true;
