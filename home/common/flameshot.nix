@@ -20,9 +20,8 @@
   };
 
   home.activation.flameshot_dir = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    run mkdir --parents "${config.home.homeDirectory}/pictures/screenshots"
+    run mkdir --parents /tmp/foo/bar/blah
   '';
-
 
   # Workaround for Failed to restart syncthingtray.service: Unit tray.target not found.
   # - https://github.com/nix-community/home-manager/issues/2064
