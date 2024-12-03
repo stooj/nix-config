@@ -27,6 +27,9 @@
           rofi = if config.programs.rofi.enable then
                     config.programs.rofi.finalPackage
                  else pkgs.rofi;
+          rofi-pass = if config.programs.rofi.pass.enable then
+                         config.programs.rofi.pass.package
+                      else pkgs.rofi-pass;
         in lib.mkOptionDefault {
           "${modifier}+h" = "focus left";
           "${modifier}+j" = "focus down";
@@ -42,6 +45,7 @@
           # Other rofi launchers
           "${modifier}+Shift+D" = "exec ${rofi}/bin/rofi -show drun";
           "${modifier}+Shift+S" = "exec ${rofi}/bin/rofi -show emoji -modi emoji";
+          "${modifier}+p" = "exec ${rofi-pass}/bin/rofi-pass";
           # Exit menu
           "${modifier}+Shift+e" = "exec ${pkgs.writeShellScript "exit_menu" ''
             #!/bin/sh
