@@ -1,10 +1,9 @@
 { pkgs, config, lib, ... }:
 {
-  programs.rofi = {
-    enable = true;
-    location = "center";
-    plugins = [ pkgs.rofi-emoji ];
-  };
+
+  imports = [
+    ./rofi.nix
+  ];
 
   services.dunst = {
     enable = true;
