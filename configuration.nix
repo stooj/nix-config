@@ -98,7 +98,10 @@
     git
   ];
 
-  programs.vim.defaultEditor = true;
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   programs.gnupg.agent = {
     enable = true;
