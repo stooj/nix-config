@@ -75,7 +75,7 @@
         proxy = {};
         wifi = {
           mode = "infrastructure";
-          ssid = "MIWIFI_rJdj";
+          ssid = "MOVISTAR_2749";
         };
         wifi-security = {
           auth-alg = "open";
