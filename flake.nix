@@ -24,11 +24,13 @@
         disko.nixosModules.disko
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.sharedModules = [inputs.sops-nix.homeManagerModules.sops];
-          home-manager.users.stooj = import ./home/stooj;
-          home-manager.users.pindy = import ./home/pindy;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            sharedModules = [inputs.sops-nix.homeManagerModules.sops];
+            users.stooj = import ./home/stooj;
+            users.pindy = import ./home/pindy;
+          };
         }
         sops-nix.nixosModules.sops
         ./configuration.nix
