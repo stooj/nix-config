@@ -7,6 +7,7 @@
     ./gpg.nix
     ./mr.nix
     ./password-store.nix
+    ./sops.nix
     ./xdg.nix
   ];
 }
