@@ -12,5 +12,14 @@
       };
       Install.WantedBy = ["multi-user.target"];
     };
+    timers.nextcloud-downloads-autosync = {
+      Unit.Description = "Automatic sync download files with Nextcloud when booted up after 5 minutes then rerun every 60 minutes";
+      Timer = {
+        OnBootSec = "5min";
+        OnUnitActiveSec = "60min";
+      };
+      Install.WantedBy = ["multi-user.target" "timers.target"];
+    };
+    startServices = true;
   };
 }
