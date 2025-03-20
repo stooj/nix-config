@@ -17,7 +17,7 @@
     Timer = {
       OnBootSec = "5min";
       RandomizedDelaySec = "10min";
-      OnUnitActiveSec = "60min";
+      OnUnitActiveSec = "10min";
     };
     Install.WantedBy = ["multi-user.target" "timers.target"];
   };
