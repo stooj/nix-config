@@ -1,7 +1,13 @@
-{pkgs, ...}:{
+{pkgs, config, ...}:{
   sops.secrets.nextcloud_url = {};
   sops.secrets.nextcloud_user = {};
   sops.secrets.nextcloud_password = {};
+
+  sops.templates."nextcloud.env".content = ''
+    NEXTCLOUD_USERNAME = "${config.sops.placeholder.nextcloud_user}"
+    NEXTCLOUD_PASSWORD = "${config.sops.placeholder.nextcloud_password}"
+    NEXTCLOUD_URL = "${config.sops.placeholder.nextcloud_url}"
+  '';
 
   systemd.user = {
     services.nextcloud-downloads-autosync = {
