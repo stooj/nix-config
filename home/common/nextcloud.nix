@@ -13,7 +13,7 @@
     services.nextcloud-downloads-autosync = {
       Unit = {
         Description = "Auto sync Nextcloud downloads dir";
-        After = "network-online.target";
+        After = ["network-online.target" "sops-nix.service"];
       };
       Service = {
         Type = "simple";
