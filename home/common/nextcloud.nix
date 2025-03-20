@@ -1,4 +1,26 @@
-{pkgs, config, ...}:{
+{pkgs, config, ...}: let
+  ncService = directory: {
+    Unit = {
+      Description = "Auto sync Nextcloud ${directory} dir";
+      After = ["network-online.target" "sops-nix.service"];
+    };
+    Service = {
+      Type = "simple";
+      EnvironmentFile = "${config.sops.templates."nextcloud.env".path}";
+      ExecStart = "${pkgs.nextcloud-client}/bin/nextcloudcmd -h --user \${NEXTCLOUD_USERNAME} --password \${NEXTCLOUD_PASSWORD} --path /${directory} %h/${directory} \${NEXTCLOUD_URL}";
+      TimeoutStopSec = "180";
+    };
+    Install.WantedBy = ["multi-user.target"];
+  };
+  ncTimer = directory: {
+    Unit.Description = "Automatic sync ${directory} files with Nextcloud when booted up after 5 minutes then rerun every 60 minutes";
+    Timer = {
+      OnBootSec = "5min";
+      OnUnitActiveSec = "60min";
+    };
+    Install.WantedBy = ["multi-user.target" "timers.target"];
+  };
+in {
   sops.secrets.nextcloud_url = {};
   sops.secrets.nextcloud_user = {};
   sops.secrets.nextcloud_password = {};
@@ -10,27 +32,9 @@
   '';
 
   systemd.user = {
-    services.nextcloud-downloads-autosync = {
-      Unit = {
-        Description = "Auto sync Nextcloud downloads dir";
-        After = ["network-online.target" "sops-nix.service"];
-      };
-      Service = {
-        Type = "simple";
-        EnvironmentFile = "${config.sops.templates."nextcloud.env".path}";
-        ExecStart = "${pkgs.nextcloud-client}/bin/nextcloudcmd -h --user \${NEXTCLOUD_USERNAME} --password \${NEXTCLOUD_PASSWORD} --path /downloads %h/downloads \${NEXTCLOUD_URL}";
-        TimeoutStopSec = "180";
-      };
-      Install.WantedBy = ["multi-user.target"];
-    };
-    timers.nextcloud-downloads-autosync = {
-      Unit.Description = "Automatic sync download files with Nextcloud when booted up after 5 minutes then rerun every 60 minutes";
-      Timer = {
-        OnBootSec = "5min";
-        OnUnitActiveSec = "60min";
-      };
-      Install.WantedBy = ["multi-user.target" "timers.target"];
-    };
+    
+    services.nextcloud-downloads-autosync = ncService "downloads";
+    timers.nextcloud-downloads-autosync = ncTimer "downloads";
     startServices = true;
   };
 }
