@@ -34,10 +34,22 @@ in {
   systemd.user = {
     
     services = {
+      nextcloud-backups-autosync = ncService "backups";
+      nextcloud-documents-autosync = ncService "documents";
       nextcloud-downloads-autosync = ncService "downloads";
+      nextcloud-music-autosync = ncService "music";
+      nextcloud-pictures-autosync = ncService "pictures";
+      nextcloud-tmp-autosync = ncService "tmp";
+      nextcloud-videos-autosync = ncService "videos";
     };
     timers = {
+      nextcloud-backups-autosync = ncTimer "backups";
+      nextcloud-documents-autosync = ncTimer "documents";
       nextcloud-downloads-autosync = ncTimer "downloads";
+      nextcloud-music-autosync = ncTimer "music";
+      nextcloud-pictures-autosync = ncTimer "pictures";
+      nextcloud-tmp-autosync = ncTimer "tmp";
+      nextcloud-videos-autosync = ncTimer "videos";
     };
     startServices = true;
   };
