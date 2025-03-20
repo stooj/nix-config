@@ -13,6 +13,7 @@
     ./mr.nix
     ./password-store.nix
     ./readline.nix
+    ./testsecret.nix
   ];
 
   programs.qutebrowser = {
