@@ -1,4 +1,8 @@
 {pkgs, ...}:{
+  sops.secrets.nextcloud_url = {};
+  sops.secrets.nextcloud_user = {};
+  sops.secrets.nextcloud_password = {};
+
   systemd.user = {
     services.nextcloud-downloads-autosync = {
       Unit = {
