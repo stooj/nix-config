@@ -33,8 +33,12 @@ in {
 
   systemd.user = {
     
-    services.nextcloud-downloads-autosync = ncService "downloads";
-    timers.nextcloud-downloads-autosync = ncTimer "downloads";
+    services = {
+      nextcloud-downloads-autosync = ncService "downloads";
+    };
+    timers = {
+      nextcloud-downloads-autosync = ncTimer "downloads";
+    };
     startServices = true;
   };
 }
