@@ -16,6 +16,7 @@
     Unit.Description = "Automatic sync ${directory} files with Nextcloud when booted up after 5 minutes then rerun every 60 minutes";
     Timer = {
       OnBootSec = "5min";
+      RandomizedDelaySec = "10min";
       OnUnitActiveSec = "60min";
     };
     Install.WantedBy = ["multi-user.target" "timers.target"];
