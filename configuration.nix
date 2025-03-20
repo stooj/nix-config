@@ -104,6 +104,7 @@
 
   environment.systemPackages = with pkgs; [
     git
+    nextcloud-client
   ];
 
   programs.vim = {
