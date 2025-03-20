@@ -83,6 +83,29 @@
           psk = "$RENTAL_FLAT_PSK";
         };
       };
+      rental-flat-5gh = {
+        connection = {
+          id = "rental-flat-5gh";
+          type = "wifi";
+        };
+        ipv4 = {
+          method = "auto";
+        };
+        ipv6 = {
+          addr-gen-mode = "default";
+          method = "auto";
+        };
+        proxy = {};
+        wifi = {
+          mode = "infrastructure";
+          ssid = "MOVISTAR_PLUS_2749";
+        };
+        wifi-security = {
+          auth-alg = "open";
+          key-mgmt = "wpa-psk";
+          psk = "$RENTAL_FLAT_PSK";
+        };
+      };
     };
   };
 }
