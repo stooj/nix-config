@@ -18,7 +18,7 @@
       Service = {
         Type = "simple";
         EnvironmentFile = "${config.sops.templates."nextcloud.env".path}";
-        ExecStart = "${pkgs.nextcloud-client}/bin/nextcloudcmd -h --user \${NEXTCLOUD_USERNAME} --password \${NEXTCLOUD_PASSWORD} --path /downloads %D/nextcloud/downloads \${NEXTCLOUD_URL}";
+        ExecStart = "${pkgs.nextcloud-client}/bin/nextcloudcmd -h --user \${NEXTCLOUD_USERNAME} --password \${NEXTCLOUD_PASSWORD} --path /downloads %h/downloads \${NEXTCLOUD_URL}";
         TimeoutStopSec = "180";
       };
       Install.WantedBy = ["multi-user.target"];
