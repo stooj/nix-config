@@ -75,6 +75,14 @@
     stoojPasswordHash = {
       neededForUsers = true;
     };
+    stoojSSHKey = {
+      owner = "stooj";
+      path = "/home/stooj/.ssh/id_ed25519";
+    };
+    pindySSHKey = {
+      owner = "pindy";
+      path = "/home/pindy/.ssh/id_ed25519";
+    };
   };
 
   users.mutableUsers = false;
