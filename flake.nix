@@ -10,6 +10,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOs/nixos-hardware/master";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     sops-nix = {
       url = "github:Mic92/sops-nix";
