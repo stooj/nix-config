@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, disko, home-manager, sops-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, disko, home-manager, sops-nix, ... }@inputs: {
     nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
