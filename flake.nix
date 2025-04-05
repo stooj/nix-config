@@ -33,6 +33,7 @@
             users.pindy = import ./home/pindy;
           };
         }
+        nixos-hardware.nixosModules.common-cpu-intel-alder-lake
         nixos-hardware.nixosModules.system76
         sops-nix.nixosModules.sops
         ./darp8.nix
