@@ -34,6 +34,7 @@
           };
         }
         nixos-hardware.nixosModules.common-cpu-intel
+        nixos-hardware.nixosModules.common-pc-laptop
         nixos-hardware.nixosModules.system76
         sops-nix.nixosModules.sops
         ./configuration.nix
