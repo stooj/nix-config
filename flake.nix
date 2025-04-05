@@ -36,7 +36,6 @@
         nixos-hardware.nixosModules.common-cpu-intel
         nixos-hardware.nixosModules.system76
         sops-nix.nixosModules.sops
-        ./darp8.nix
         ./configuration.nix
       ];
     };
