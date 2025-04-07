@@ -12,6 +12,7 @@
     ./i3wm
     ./mr.nix
     ./password-store.nix
+    ./preferences.nix
     ./readline.nix
   ];
 
