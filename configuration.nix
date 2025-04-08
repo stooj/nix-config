@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ./disks.nix
       ./power-management.nix
+      ./vim.nix
       ./wireless.nix
     ];
 
@@ -107,11 +108,6 @@
     git
     nextcloud-client
   ];
-
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-  };
 
   programs.gnupg.agent = {
     enable = true;
