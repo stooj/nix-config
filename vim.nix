@@ -1,8 +1,15 @@
-{...}:
+{pkgs, ...}:
 {
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
+  environment.variables = {
+    EDITOR = "vim";
   };
-
+  environment.systemPackages = with pkgs; [
+    ((vim_configurable.override { }).customize{
+      name = "vim";
+      vimrcConfig.customRC = ''
+        syntax on
+        set number
+      '';
+    })
+  ];
 }
