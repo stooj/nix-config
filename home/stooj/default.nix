@@ -10,6 +10,7 @@
     ./git.nix
     ./gpg.nix
     ./i3wm
+    ./kitty.nix
     ./mr.nix
     ./password-store.nix
     ./preferences.nix
