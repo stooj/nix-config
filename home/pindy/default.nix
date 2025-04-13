@@ -9,6 +9,7 @@
     ../common
     ./git.nix
     ./gpg.nix
+    ./konsole.nix
     ./password-store.nix
   ];
 
