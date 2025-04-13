@@ -11,6 +11,7 @@
     ./gpg.nix
     ./konsole.nix
     ./password-store.nix
+    ./preferences.nix
   ];
 
   home.stateVersion = "24.05";
