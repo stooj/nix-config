@@ -12,13 +12,17 @@
     };
     nixos-hardware.url = "github:NixOs/nixos-hardware/master";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sops-nix = {
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, disko, home-manager, sops-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, disko, home-manager, nixvim, sops-nix, ... }@inputs: {
     nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -28,7 +32,10 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            sharedModules = [inputs.sops-nix.homeManagerModules.sops];
+            sharedModules = [
+              inputs.nixvim.homeManagerModules.nixvim
+              inputs.sops-nix.homeManagerModules.sops
+            ];
             users.stooj = import ./home/stooj;
             users.pindy = import ./home/pindy;
           };
