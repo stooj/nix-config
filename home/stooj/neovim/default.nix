@@ -1,4 +1,7 @@
 {...}:{
+  imports = [
+    ./style.nix
+  ];
   programs.nixvim = {
     enable = true;
     vimAlias = true;
