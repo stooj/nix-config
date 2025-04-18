@@ -6,6 +6,9 @@
     enable = true;
     vimAlias = true;
 
-    opts.number = true;
+    opts = {
+      number = true;
+      relativenumber = true;
+    };
   };
 }
