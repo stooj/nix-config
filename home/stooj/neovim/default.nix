@@ -5,5 +5,8 @@
 
     # Theming
     ./style.nix
+
+    # Utils
+    ./plugins/utils/which-key.nix
   ];
 }
