@@ -22,6 +22,10 @@
       	action = "current_buffer_fuzzy_find";
 	options.desc = "Fuzzy [f]ind in the current buffer";
       };
+      "<leader>fb" = {
+        action = "buffers";
+	options.desc = "Fuzzy [f]ind open [b]uffers";
+      };
     };
   };
 }
