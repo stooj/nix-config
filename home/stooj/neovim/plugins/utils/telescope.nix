@@ -38,6 +38,10 @@
         action = "grep_string";
 	options.desc = "Fuzzy [f]ind word under cursor";
       };
+      "<leader>fo" = {
+        action = "oldfiles";
+	options.desc = "Fuzzy [f]ind [o]ld files";
+      };
     };
   };
 }
