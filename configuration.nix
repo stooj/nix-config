@@ -106,6 +106,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    fd
     git
     nextcloud-client
     ripgrep
