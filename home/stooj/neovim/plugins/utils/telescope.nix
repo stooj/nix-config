@@ -10,6 +10,10 @@
         action = "find_files";
 	options.desc = "Find files in the working directory";
       };
+      "<leader>fg" = {
+        action = "live_grep";
+	options.desc = "Grep for text";
+      };
     };
   };
 }
