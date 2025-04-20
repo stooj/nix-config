@@ -10,6 +10,7 @@
       ./bash.nix
       ./hardware-configuration.nix
       ./disks.nix
+      ./fonts.nix
       ./power-management.nix
       ./vim.nix
       ./wireless.nix
