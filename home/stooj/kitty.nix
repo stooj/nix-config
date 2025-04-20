@@ -7,5 +7,7 @@
       "ctrl+shift+p>f" = "kitten hints --type path --program *";
     };
     shellIntegration.enableBashIntegration = true;
+
+    font.name = "Hurmit Nerd Font";
   };
 }
