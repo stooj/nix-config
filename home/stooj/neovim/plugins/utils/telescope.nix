@@ -30,6 +30,10 @@
         action = "keymaps";
 	options.desc = "Fuzzy [f]ind [k]eymap bindings";
       };
+      "<leader>fh" = {
+        action = "help_tags";
+	options.desc = "Fuzzy [f]ind [h]elp topics";
+      };
     };
   };
 }
