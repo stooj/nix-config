@@ -8,6 +8,7 @@
     ./mr.nix
     ./nextcloud.nix
     ./password-store.nix
+    ./ripgrep.nix
     ./sops.nix
     ./xdg.nix
   ];
