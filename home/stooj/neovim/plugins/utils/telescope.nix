@@ -18,6 +18,10 @@
         action = "live_grep";
 	options.desc = "Grep for text";
       };
+      "<leader>f/" = {
+      	action = "current_buffer_fuzzy_find";
+	options.desc = "Fuzzily search in the current buffer";
+      };
     };
   };
 }
