@@ -1,5 +1,8 @@
 {...}:{
-  programs.nixvim.plugins.mini.modules = {
-    icons.enable = true;
+  programs.nixvim.plugins.mini = {
+    mockDevIcons = true;
+    modules = {
+      icons.enable = true;
+    };
   };
 }
