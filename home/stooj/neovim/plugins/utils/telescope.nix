@@ -12,15 +12,15 @@
     keymaps = {
       "<leader>ff" = {
         action = "find_files";
-	options.desc = "Find files in the working directory";
+	options.desc = "Fuzzy [f]ind [f]iles in the working directory";
       };
       "<leader>fg" = {
         action = "live_grep";
-	options.desc = "Grep for text";
+	options.desc = "Fuzzy [f]ind with [g]rep";
       };
       "<leader>f/" = {
       	action = "current_buffer_fuzzy_find";
-	options.desc = "Fuzzily search in the current buffer";
+	options.desc = "Fuzzy [f]ind in the current buffer";
       };
     };
   };
