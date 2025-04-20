@@ -54,6 +54,10 @@
         action = "search_history";
 	options.desc = "Fuzzy [f]ind [/] search [h]istory";
       };
+      "<leader>fm" = {
+        action = "marks";
+	options.desc = "Fuzzy [f]ind vim [m]arks";
+      };
     };
   };
 }
