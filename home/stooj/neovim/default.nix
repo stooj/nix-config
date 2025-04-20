@@ -4,6 +4,7 @@
     ./settings.nix
 
     # Theming
+    ./style/icons.nix
     ./style/theme.nix
 
     # Utils
