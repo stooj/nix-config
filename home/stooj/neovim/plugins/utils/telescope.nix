@@ -42,6 +42,10 @@
         action = "oldfiles";
 	options.desc = "Fuzzy [f]ind [o]ld files";
       };
+      "<leader>f:" = {
+        action = "commands";
+	options.desc = "Fuzzy [f]ind [:] commands";
+      };
     };
   };
 }
