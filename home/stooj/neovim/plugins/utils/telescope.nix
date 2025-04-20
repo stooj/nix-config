@@ -34,6 +34,10 @@
         action = "help_tags";
 	options.desc = "Fuzzy [f]ind [h]elp topics";
       };
+      "<leader>f*" = {
+        action = "grep_string";
+	options.desc = "Fuzzy [f]ind word under cursor";
+      };
     };
   };
 }
