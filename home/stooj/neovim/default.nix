@@ -1,6 +1,7 @@
 {...}:{
   imports = [
     # General settings
+    ./keymaps.nix
     ./settings.nix
 
     # Theming
