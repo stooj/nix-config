@@ -108,6 +108,7 @@
   environment.systemPackages = with pkgs; [
     git
     nextcloud-client
+    ripgrep
   ];
 
   programs.gnupg.agent = {
