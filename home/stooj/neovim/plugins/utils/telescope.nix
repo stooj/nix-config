@@ -46,6 +46,10 @@
         action = "commands";
 	options.desc = "Fuzzy [f]ind [:] commands";
       };
+      "<leader>f:h" = {
+        action = "command_history";
+	options.desc = "Fuzzy [f]ind [:] command [h]istory";
+      };
     };
   };
 }
