@@ -26,6 +26,10 @@
         action = "buffers";
 	options.desc = "Fuzzy [f]ind open [b]uffers";
       };
+      "<leader>fk" = {
+        action = "keymaps";
+	options.desc = "Fuzzy [f]ind [k]eymap bindings";
+      };
     };
   };
 }
