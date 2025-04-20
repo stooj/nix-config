@@ -4,7 +4,7 @@
     ./settings.nix
 
     # Theming
-    ./style.nix
+    ./style/theme.nix
 
     # Utils
     ./plugins/utils/telescope.nix
