@@ -11,6 +11,9 @@
     # Completion
     ./plugins/completion/cmp.nix
 
+    # Snippets
+    ./plugins/snippets/luasnip.nix
+
     # Utils
     ./plugins/utils/lastplace.nix
     ./plugins/utils/mini.nix
