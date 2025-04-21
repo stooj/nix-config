@@ -5,6 +5,10 @@
   programs.nixvim.plugins.cmp = {
     enable = true;
     settings = {
+      mapping = {
+        "<C-j>" = "cmp.mapping.select_next_item()";
+        "<C-k>" = "cmp.mapping.select_prev_item()";
+      };
       sources = [
         {
           name = "buffer"; keyword_length = 3;
