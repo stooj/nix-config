@@ -10,6 +10,9 @@
       relativenumber = true;
       # Undo history will be stored in "$HOME/.local/state/nvim/undo"
       undofile = true;
+      # Open splits below or to the right of the current window.
+      splitbelow = true;
+      splitright = true;
     };
 
     autoCmd = [
