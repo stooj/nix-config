@@ -8,6 +8,8 @@
     opts = {
       number = true;
       relativenumber = true;
+      # Undo history will be stored in "$HOME/.local/state/nvim/undo"
+      undofile = true;
     };
 
     autoCmd = [
