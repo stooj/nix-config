@@ -4,13 +4,15 @@
   # https://github.com/hrsh7th/nvim-cmp
   programs.nixvim.plugins.cmp = {
     enable = true;
-    settings.sources = [
-      {
-        name = "buffer"; keyword_length = 3;
-      }
-      {
-        name = "path"; keyword_length = 3;
-      }
-    ];
+    settings = {
+      sources = [
+        {
+          name = "buffer"; keyword_length = 3;
+        }
+        {
+          name = "path"; keyword_length = 3;
+        }
+      ];
+    };
   };
 }
