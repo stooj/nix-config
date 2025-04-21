@@ -8,6 +8,9 @@
     ./style/icons.nix
     ./style/theme.nix
 
+    # Completion
+    ./plugins/completion/cmp.nix
+
     # Utils
     ./plugins/utils/mini.nix
     ./plugins/utils/telescope.nix
