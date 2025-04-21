@@ -21,6 +21,16 @@
 	event = [ "BufRead" ];
 	pattern = "*";
       }
+      {
+	desc = "Disable undo file for sensitive files";
+        command = "setlocal noundofile";
+	event = [ "BufWritePre" ];
+	pattern = [
+	  "/dev/shm/pass*"
+	  "*/.git/COMMIT_EDITMSG"
+	  "/tmp/*"
+	];
+      }
     ];
   };
 }
