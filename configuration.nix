@@ -137,6 +137,9 @@
     age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
   };
 
+  # Generate Man page cache for apropos
+  documentation.man.generateCaches = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
