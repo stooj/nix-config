@@ -6,6 +6,7 @@
     enable = true;
     settings.sources = [
       { name = "buffer"; }
+      { name = "path"; }
     ];
   };
 }
