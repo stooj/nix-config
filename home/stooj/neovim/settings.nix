@@ -23,6 +23,12 @@
 	  "/tmp/*"
 	];
       }
+      {
+	desc = "Resize vim splits if window is resized";
+	command = ":wincmd =";
+	event = [ "VimResized" ];
+	pattern = "*";
+      }
     ];
   };
 }
