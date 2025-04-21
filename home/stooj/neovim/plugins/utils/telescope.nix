@@ -58,6 +58,10 @@
         action = "marks";
 	options.desc = "Fuzzy [f]ind vim [m]arks";
       };
+      "<leader>fK" = {
+        action = "man_pages";
+	options.desc = "Fuzzy [f]ind man pages";
+      };
     };
   };
 }
