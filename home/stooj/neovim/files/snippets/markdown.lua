@@ -1,3 +1,3 @@
 return {
-	s("trig", t("loaded!!"))
+	s({trig="todogc"}, t("<!-- TODO Link to commit -->"))
 }
