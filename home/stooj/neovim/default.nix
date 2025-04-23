@@ -11,6 +11,9 @@
     # Completion
     ./plugins/completion/cmp.nix
 
+    # Editor plugins and configurations
+    ./plugins/editor/treesitter.nix
+
     # Snippets
     ./plugins/snippets/luasnip.nix
 
