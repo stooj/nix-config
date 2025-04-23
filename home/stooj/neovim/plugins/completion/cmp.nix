@@ -16,6 +16,9 @@
         {
           name = "path"; keyword_length = 3;
         }
+	{
+	  name = "luasnip";
+	}
       ];
     };
   };
