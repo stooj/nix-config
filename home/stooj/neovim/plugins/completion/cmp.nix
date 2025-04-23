@@ -8,6 +8,7 @@
       mapping = {
         "<C-j>" = "cmp.mapping.select_next_item()";
         "<C-k>" = "cmp.mapping.select_prev_item()";
+        "<C-l>" = "cmp.mapping.confirm({ select = true })";
       };
       snippet.expand = ''
         function(args)
