@@ -20,6 +20,8 @@
 
       # How much should vim commands like `>>` and `<<` indent/dedent things?
       shiftwidth = 4;
+      # How many 'spaces' should a tab take up?
+      tabstop = 4;
     };
 
     autoCmd = [
