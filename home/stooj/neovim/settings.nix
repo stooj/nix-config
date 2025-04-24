@@ -22,6 +22,8 @@
       shiftwidth = 4;
       # How many 'spaces' should a tab take up?
       tabstop = 4;
+      # Use spaces instead of a tab when I press the Tab key
+      expandtab = true;
     };
 
     autoCmd = [
