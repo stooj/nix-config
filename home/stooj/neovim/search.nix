@@ -6,6 +6,9 @@
       ignorecase = true;
       # If my search string contains a capital letter, make the search case-sensitive
       smartcase = true;
+      # Make replacements default to global ones (all matches on a line).
+      # To make it not-global, add a `/g` to the end of the replace command.
+      gdefault = true;
     };
   };
 }
