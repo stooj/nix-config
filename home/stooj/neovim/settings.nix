@@ -13,6 +13,13 @@
       # Open splits below or to the right of the current window.
       splitbelow = true;
       splitright = true;
+      # If a filetype doesn't have a specific indent ruleset, I want spaces to
+      # be the default. Tabs are not my friend.
+      # These can be overwritten by any ft indentation rules which I will
+      # declare elsewhere.
+
+      # How much should vim commands like `>>` and `<<` indent/dedent things?
+      shiftwidth = 4;
     };
 
     autoCmd = [
