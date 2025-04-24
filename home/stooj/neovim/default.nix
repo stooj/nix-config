@@ -3,6 +3,7 @@
     # General settings
     ./indent.nix
     ./keymaps.nix
+    ./search.nix
     ./settings.nix
 
     # Theming
