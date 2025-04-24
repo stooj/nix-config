@@ -1,6 +1,7 @@
 {...}:{
   imports = [
     # General settings
+    ./indent.nix
     ./keymaps.nix
     ./settings.nix
 
