@@ -1,6 +1,7 @@
 {...}:{
   programs.nixvim = {
     editorconfig.enable = true;
+    plugins.sleuth.enable = true;
     opts = {
       # If a filetype doesn't have a specific indent ruleset, I want spaces to
       # be the default. Tabs are not my friend.
