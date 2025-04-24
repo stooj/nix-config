@@ -13,6 +13,8 @@
       # Open splits below or to the right of the current window.
       splitbelow = true;
       splitright = true;
+      # Let the cursor roam free in visual block mode
+      virtualedit = "block";
     };
 
     autoCmd = [
