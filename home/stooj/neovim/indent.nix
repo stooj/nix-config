@@ -1,6 +1,7 @@
 {...}:{
   programs.nixvim = {
-    editorconfig.enable = true;
+    # Vim-sleuth makes editorconfig redundant.
+    editorconfig.enable = false;
     plugins.sleuth.enable = true;
     opts = {
       # If a filetype doesn't have a specific indent ruleset, I want spaces to
