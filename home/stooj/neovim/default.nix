@@ -17,6 +17,7 @@
     ./plugins/editor/treesitter.nix
 
     # LSP and formatting
+    ./plugins/lsp/fidget.nix
     ./plugins/lsp/lsp.nix
 
     # Snippets
