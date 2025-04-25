@@ -16,6 +16,9 @@
     # Editor plugins and configurations
     ./plugins/editor/treesitter.nix
 
+    # LSP and formatting
+    ./plugins/lsp/lsp.nix
+
     # Snippets
     ./plugins/snippets/luasnip.nix
 
