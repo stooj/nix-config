@@ -26,6 +26,9 @@
 	{
 	  name = "luasnip";
 	}
+        {
+          name = "nvim_lsp";
+        }
       ];
     };
   };
