@@ -1,18 +1,12 @@
-{pkgs, lib, ...}: {
-# conform.nvim
-# Lightweight yet powerful formatter plugin for Neovim
-# See https://github.com/stevearc/conform.nvim
+{ pkgs, lib, ... }: {
+  # conform.nvim
+  # Lightweight yet powerful formatter plugin for Neovim
+  # See https://github.com/stevearc/conform.nvim
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
     settings = {
-      formatters = {
-        nixfmt = {
-          command = "${lib.getExe pkgs.nixfmt}";
-        };
-      };
-      formatters_by_ft = {
-        nix = ["nixfmt"];
-      };
+      formatters = { nixfmt = { command = "${lib.getExe pkgs.nixfmt}"; }; };
+      formatters_by_ft = { nix = [ "nixfmt" ]; };
       format_on_save = ''
         function(bufnr)
           -- Disable with a global or buffer-local variable
