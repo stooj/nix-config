@@ -32,9 +32,16 @@
       home-manager,
       nixvim,
       sops-nix,
+      systems,
       treefmt-nix,
       ...
     }@inputs:
+    let
+      # Small tool to iterate over each systems
+      eachSystem = f: nixpkgs.lib.genAttrs (import systems) (system: f nixpkgs.legacyPackages.${system});
+      # Eval the treefmt modules from ./treefmt.nix
+      treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
+    in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
       nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
