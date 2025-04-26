@@ -32,6 +32,7 @@
       home-manager,
       nixvim,
       sops-nix,
+      treefmt-nix,
       ...
     }@inputs:
     {
