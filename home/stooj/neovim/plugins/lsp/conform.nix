@@ -18,5 +18,14 @@
         end
       '';
     };
+    FormatEnable = {
+      desc = "Re-enable autoformat-on-save";
+      command.__raw = ''
+        function(args)
+          vim.b.disable_autoformat = false;
+          vim.g.disable_autoformat = false;
+        end
+      '';
+    };
   };
  }
