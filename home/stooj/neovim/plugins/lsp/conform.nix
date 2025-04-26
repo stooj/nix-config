@@ -8,7 +8,7 @@
     settings = {
       formatters = {
         nixfmt = {
-          command = "${lib.getExe pkgs.nixfmt-rfc-style}";
+          command = "${lib.getExe pkgs.nixfmt}";
         };
       };
       formatters_by_ft = {
