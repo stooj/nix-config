@@ -9,6 +9,6 @@
       "server"
       "-v 5"
     ];
-
+    servers.marksman.extraOptions.offset_encoding = "utf-8";
   };
 }
