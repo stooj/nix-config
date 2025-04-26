@@ -43,7 +43,7 @@
       treefmtEval = eachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
     in
     {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter = eachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
       nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
