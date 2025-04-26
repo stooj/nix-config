@@ -22,31 +22,42 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, disko, home-manager, nixvim, sops-nix, ... }@inputs: {
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-    nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        disko.nixosModules.disko
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            sharedModules = [
-              inputs.nixvim.homeManagerModules.nixvim
-              inputs.sops-nix.homeManagerModules.sops
-            ];
-            users.stooj = import ./home/stooj;
-            users.pindy = import ./home/pindy;
-          };
-        }
-        nixos-hardware.nixosModules.common-cpu-intel
-        nixos-hardware.nixosModules.common-pc-laptop
-        nixos-hardware.nixosModules.system76
-        sops-nix.nixosModules.sops
-        ./configuration.nix
-      ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixos-hardware,
+      disko,
+      home-manager,
+      nixvim,
+      sops-nix,
+      ...
+    }@inputs:
+    {
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      nixosConfigurations.drummer = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          disko.nixosModules.disko
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              sharedModules = [
+                inputs.nixvim.homeManagerModules.nixvim
+                inputs.sops-nix.homeManagerModules.sops
+              ];
+              users.stooj = import ./home/stooj;
+              users.pindy = import ./home/pindy;
+            };
+          }
+          nixos-hardware.nixosModules.common-cpu-intel
+          nixos-hardware.nixosModules.common-pc-laptop
+          nixos-hardware.nixosModules.system76
+          sops-nix.nixosModules.sops
+          ./configuration.nix
+        ];
+      };
     };
-  };
 }

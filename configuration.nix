@@ -2,19 +2,24 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./bash.nix
-      ./hardware-configuration.nix
-      ./disks.nix
-      ./fonts.nix
-      ./power-management.nix
-      ./vim.nix
-      ./wireless.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./bash.nix
+    ./hardware-configuration.nix
+    ./disks.nix
+    ./fonts.nix
+    ./power-management.nix
+    ./vim.nix
+    ./wireless.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -25,7 +30,10 @@
 
   time.timeZone = "Europe/Madrid";
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -95,8 +103,13 @@
   users.users.stooj = {
     hashedPasswordFile = config.sops.secrets.stoojPasswordHash.path;
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
-    openssh.authorizedKeys.keys = [ "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyl2Fwnxmr3J4OOP1hsZuFzQ6XTZhLx64rRhZp44GIadJqboI5YWXGdrz4XRUHNo8kFmwwfpIdtPckpVY3Yd4ksHCALofSUWCuQZy2/qX4WYwq7U7/QHfmFm41ZxFJz9eTxieVLTFBak/XCOXjAMpaqlnf7B8NmgLEd6Uv6k5Zi9UWXL86yztalsdh/aghWutv3QFqQVOv0vvuO0P6d7wFSqnh2SHZatyXFECLK6HR7KnD+7UA85DWeRSOYrSMLs5U8QE01SKtUReqTt4qiULLN7/oKEehf4wh7E5zCU5SlvDuMQiQKR0RogW9O/duhmGwtXAAUj71iDkwvnKM73PVHgX5cVJm30I5CSMwDZ4JB6Lj+lQN1Bf23hNIM0l7pSbGvCVX6Ok3gE7o+WM1iRZNEj5WowPfNRqZDMqdgCV3ffs7uNfbw4cZnHvE9/UXHT6vmAlgxzH54LMd7lJ5gEAfWpBGheJnstEduVU1+14HbcQmdk7d+7g8FOVSpjKg2R9tCv1uD7fYdGudTX4IP1gV5k9yMXV0cYOCb3wkJETBBfQ48uaPIlKfOsHuy7lVYQelPFAk8m/uoEBjMvxEAa/VJDzhmC+mUNnir6okHqwxojZqEw0x9X/9AwSTvR6HFE2KE/z45aeEBS4iLpgVYDZCGsAU/4wQbJXMj/ot4AtA3w== stooj@nanokey5" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    openssh.authorizedKeys.keys = [
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCyl2Fwnxmr3J4OOP1hsZuFzQ6XTZhLx64rRhZp44GIadJqboI5YWXGdrz4XRUHNo8kFmwwfpIdtPckpVY3Yd4ksHCALofSUWCuQZy2/qX4WYwq7U7/QHfmFm41ZxFJz9eTxieVLTFBak/XCOXjAMpaqlnf7B8NmgLEd6Uv6k5Zi9UWXL86yztalsdh/aghWutv3QFqQVOv0vvuO0P6d7wFSqnh2SHZatyXFECLK6HR7KnD+7UA85DWeRSOYrSMLs5U8QE01SKtUReqTt4qiULLN7/oKEehf4wh7E5zCU5SlvDuMQiQKR0RogW9O/duhmGwtXAAUj71iDkwvnKM73PVHgX5cVJm30I5CSMwDZ4JB6Lj+lQN1Bf23hNIM0l7pSbGvCVX6Ok3gE7o+WM1iRZNEj5WowPfNRqZDMqdgCV3ffs7uNfbw4cZnHvE9/UXHT6vmAlgxzH54LMd7lJ5gEAfWpBGheJnstEduVU1+14HbcQmdk7d+7g8FOVSpjKg2R9tCv1uD7fYdGudTX4IP1gV5k9yMXV0cYOCb3wkJETBBfQ48uaPIlKfOsHuy7lVYQelPFAk8m/uoEBjMvxEAa/VJDzhmC+mUNnir6okHqwxojZqEw0x9X/9AwSTvR6HFE2KE/z45aeEBS4iLpgVYDZCGsAU/4wQbJXMj/ot4AtA3w== stooj@nanokey5"
+    ];
   };
 
   users.users.pindy = {
@@ -134,7 +147,7 @@
   # Sops configuration
   sops = {
     defaultSopsFile = ./secrets.yaml;
-    age.sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
+    age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
   };
 
   # Generate Man page cache for apropos
@@ -171,4 +184,3 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-

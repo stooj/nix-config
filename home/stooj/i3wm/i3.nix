@@ -1,4 +1,9 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 {
   xsession.windowManager.i3 = {
     enable = true;
@@ -24,13 +29,11 @@
       keybindings =
         let
           modifier = config.xsession.windowManager.i3.config.modifier;
-          rofi = if config.programs.rofi.enable then
-                    config.programs.rofi.finalPackage
-                 else pkgs.rofi;
-          rofi-pass = if config.programs.rofi.pass.enable then
-                         config.programs.rofi.pass.package
-                      else pkgs.rofi-pass;
-        in lib.mkOptionDefault {
+          rofi = if config.programs.rofi.enable then config.programs.rofi.finalPackage else pkgs.rofi;
+          rofi-pass =
+            if config.programs.rofi.pass.enable then config.programs.rofi.pass.package else pkgs.rofi-pass;
+        in
+        lib.mkOptionDefault {
           "${modifier}+h" = "focus left";
           "${modifier}+j" = "focus down";
           "${modifier}+k" = "focus up";
@@ -81,29 +84,30 @@
 
             flameshot gui
           ''}";
-      };
-      menu = let
-        rofi = if config.programs.rofi.enable then
-                 config.programs.rofi.finalPackage
-               else pkgs.rofi;
-        in
-          "${rofi}/bin/rofi -show run";
-      modes = {
-        resize = let
-          modifier = config.xsession.windowManager.i3.config.modifier;
-        in {
-          "Left" = "resize shrink width 2 px or 2 ppt";
-          "h" = "resize shrink width 10 px or 10 ppt";
-          "Down" = "resize grow height 2 px or 2 ppt";
-          "j" = "resize grow height 10 px or 10 ppt";
-          "Up" = "resize shrink height 2 px or 2 ppt";
-          "k" = "resize shrink height 10 px or 10 ppt";
-          "Right" = "resize grow width 2 px or 2 ppt";
-          "l" = "resize grow width 10 px or 10 ppt";
-          "Escape" = "mode default";
-          "Return" = "mode default";
-          "${modifier}+r" = "mode default";
         };
+      menu =
+        let
+          rofi = if config.programs.rofi.enable then config.programs.rofi.finalPackage else pkgs.rofi;
+        in
+        "${rofi}/bin/rofi -show run";
+      modes = {
+        resize =
+          let
+            modifier = config.xsession.windowManager.i3.config.modifier;
+          in
+          {
+            "Left" = "resize shrink width 2 px or 2 ppt";
+            "h" = "resize shrink width 10 px or 10 ppt";
+            "Down" = "resize grow height 2 px or 2 ppt";
+            "j" = "resize grow height 10 px or 10 ppt";
+            "Up" = "resize shrink height 2 px or 2 ppt";
+            "k" = "resize shrink height 10 px or 10 ppt";
+            "Right" = "resize grow width 2 px or 2 ppt";
+            "l" = "resize grow width 10 px or 10 ppt";
+            "Escape" = "mode default";
+            "Return" = "mode default";
+            "${modifier}+r" = "mode default";
+          };
       };
       modifier = "Mod4";
       gaps = {

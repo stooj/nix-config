@@ -1,4 +1,5 @@
-{...}:{
+{ ... }:
+{
   imports = [
     # General settings
     ./indent.nix

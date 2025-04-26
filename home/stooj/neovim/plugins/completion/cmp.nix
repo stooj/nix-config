@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   # hrsh7th/nvim-cmp: A completion engine plugin for neovim written in Lua.
   # Completion sources are installed from external repositories and "sourced".
   # https://github.com/hrsh7th/nvim-cmp
@@ -18,14 +19,16 @@
       '';
       sources = [
         {
-          name = "buffer"; keyword_length = 3;
+          name = "buffer";
+          keyword_length = 3;
         }
         {
-          name = "path"; keyword_length = 3;
+          name = "path";
+          keyword_length = 3;
         }
-	{
-	  name = "luasnip";
-	}
+        {
+          name = "luasnip";
+        }
         {
           name = "nvim_lsp";
         }

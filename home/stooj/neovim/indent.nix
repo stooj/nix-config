@@ -1,4 +1,5 @@
-{...}:{
+{ ... }:
+{
   programs.nixvim = {
     # Vim-sleuth makes editorconfig redundant.
     editorconfig.enable = false;

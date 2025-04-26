@@ -1,8 +1,9 @@
-{config, ...}: {
-  sops.secrets.rental-flat-psk = {};
-  sops.secrets.ceres-hotspot-psk = {};
-  sops.secrets.coworking-ssid = {};
-  sops.secrets.coworking-psk = {};
+{ config, ... }:
+{
+  sops.secrets.rental-flat-psk = { };
+  sops.secrets.ceres-hotspot-psk = { };
+  sops.secrets.coworking-ssid = { };
+  sops.secrets.coworking-psk = { };
   sops.templates."wireless.env".content = ''
     RENTAL_FLAT_PSK = "${config.sops.placeholder.rental-flat-psk}"
     CERES_HOTSPOT_PSK = "${config.sops.placeholder.ceres-hotspot-psk}"
@@ -26,7 +27,7 @@
           addr-gen-mode = "default";
           method = "auto";
         };
-        proxy = {};
+        proxy = { };
         wifi = {
           mode = "infrastructure";
           ssid = "ceres";
@@ -49,7 +50,7 @@
           addr-gen-mode = "default";
           method = "auto";
         };
-        proxy = {};
+        proxy = { };
         wifi = {
           mode = "infrastructure";
           ssid = "$COWORKING_SSID";
@@ -72,7 +73,7 @@
           addr-gen-mode = "default";
           method = "auto";
         };
-        proxy = {};
+        proxy = { };
         wifi = {
           mode = "infrastructure";
           ssid = "MOVISTAR_2749";
@@ -95,7 +96,7 @@
           addr-gen-mode = "default";
           method = "auto";
         };
-        proxy = {};
+        proxy = { };
         wifi = {
           mode = "infrastructure";
           ssid = "MOVISTAR_PLUS_2749";
