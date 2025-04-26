@@ -40,5 +40,22 @@
         end
       '';
     };
+    Format = {
+      desc = "Format buffer with conform";
+      command.__raw = ''
+        function(args)
+          local range = nil
+          if args.count ~= -1 then
+            local end_line = vim.api.nvim_buf_get_lines(0, args.lind2 - 1, args.lind2, true)[1]
+            range = {
+              start = { args.line1, 0 },
+              ["end"] = { args.line2, end_line:len() },
+            }
+          end
+          require("conform").format({ async = true; lsp_format = "fallback", range = range })
+        end
+      '';
+      range = true;
+    };
   };
 }
