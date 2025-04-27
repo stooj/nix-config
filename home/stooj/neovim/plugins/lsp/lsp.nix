@@ -7,7 +7,7 @@
     servers.marksman.cmd = [
       "${lib.getExe pkgs.marksman}"
       "server"
-      "-v 5"
+      "-v 1"
     ];
     servers.marksman.extraOptions.offset_encoding = "utf-8";
   };
