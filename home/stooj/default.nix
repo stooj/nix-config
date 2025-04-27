@@ -12,7 +12,7 @@
     ./i3wm
     ./kitty.nix
     ./mr.nix
-    ./neovim
+    ./neovim-minimal
     ./password-store.nix
     ./preferences.nix
     ./qutebrowser.nix
