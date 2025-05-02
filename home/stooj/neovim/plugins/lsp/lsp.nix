@@ -8,7 +8,7 @@
       harper_ls = {
         enable = true;
         settings = {
-          "[\"harper-ls\"]" = {
+          "harper-ls" = {
             linters = {
               SpellCheck = false;
             };
