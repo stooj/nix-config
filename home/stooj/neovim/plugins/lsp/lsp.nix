@@ -5,7 +5,7 @@
     servers = {
       nil_ls.enable = true;
       marksman.enable = true;
-      vale_ls.enable = true;
+      harper_ls.enable = true;
     };
   };
 }
