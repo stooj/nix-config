@@ -4,6 +4,9 @@
   # Lightweight yet powerful formatter plugin for Neovim
   # See https://github.com/stevearc/conform.nvim
   programs.nixvim = {
+    extraPackages = with pkgs; [
+      prettierd
+    ];
     plugins.conform-nvim = {
       enable = true;
       settings = {
