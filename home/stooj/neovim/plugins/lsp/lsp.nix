@@ -1,5 +1,17 @@
 { ... }:
 {
+  programs.nixvim.extraConfigLua = ''
+      require('lspconfig').harper_ls.setup {
+      settings = {
+        ["harper-ls"] = {
+          linters = {
+            SentenceCapitalization = false,
+            SpellCheck = false
+          }
+        }
+      }
+    }
+  '';
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
@@ -7,14 +19,6 @@
       marksman.enable = true;
       harper_ls = {
         enable = true;
-        settings = {
-          harper_ls = {
-            linters = {
-              sentence_capitalization = false;
-              spell_check = false;
-            };
-          };
-        };
       };
     };
   };
