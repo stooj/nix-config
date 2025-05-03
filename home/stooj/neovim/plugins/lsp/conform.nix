@@ -16,6 +16,7 @@
           };
         };
         formatters_by_ft = {
+          markdown = [ "prettierd" ];
           nix = [ "nixfmt" ];
         };
         format_on_save = ''
