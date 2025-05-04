@@ -13,6 +13,7 @@
     ./kitty.nix
     ./mr.nix
     ./neovim
+    ./neovide.nix
     ./password-store.nix
     ./preferences.nix
     ./qutebrowser.nix

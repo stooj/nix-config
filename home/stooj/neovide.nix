@@ -1,0 +1,4 @@
+{ ... }:
+{
+  programs.neovide.enable = true;
+}
