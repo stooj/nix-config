@@ -3,7 +3,7 @@
   programs.neovide = {
     enable = true;
     settings = {
-      neovim-bin = config.programs.nixvim.package;
+      neovim-bin = config.programs.nixvim.build.package;
     };
   };
 }
