@@ -7,6 +7,9 @@
     ./search.nix
     ./settings.nix
 
+    # Gui settings
+    ./neovide.nix
+
     # Theming
     ./style/icons.nix
     ./style/theme.nix
