@@ -1,9 +1,9 @@
-{ pkgs, lib, ... }:
+{ config, ... }:
 {
   programs.neovide = {
     enable = true;
     settings = {
-      neovim-bin = "${lib.getExe pkgs.neovim}";
+      neovim-bin = config.programs.nixvim.package;
     };
   };
 }
