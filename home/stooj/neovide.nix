@@ -1,4 +1,9 @@
 { ... }:
 {
-  programs.neovide.enable = true;
+  programs.neovide = {
+    enable = true;
+    settings = {
+      neovim-bin = "nvim";
+    };
+  };
 }
