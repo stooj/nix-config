@@ -1,10 +1,10 @@
-{ ... }:
+{ pkgs, lib, ... }:
 {
   programs.qutebrowser = {
     enable = true;
     settings.editor = {
       command = [
-        "neovide"
+        "${lib.getExe pkgs.neovide}"
         "--no-fork"
         "{}"
       ];
