@@ -2,7 +2,7 @@
 {
   programs.nixvim = {
     globals.neovide_scale_factor = 1.0;
-    opts.guifont = "Hurmit Nerd Font:h8";
+    opts.guifont = "Hurmit Nerd Font:h7";
     keymaps = [
       {
         key = "<C-+>";
