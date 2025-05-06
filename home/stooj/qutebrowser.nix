@@ -2,6 +2,13 @@
 {
   programs.qutebrowser = {
     enable = true;
+    settings.editor = {
+      command = [
+        "neovide"
+        "--no-fork"
+        "{}"
+      ];
+    };
     keyBindings = {
       normal = {
         "yr" = "yank inline `{title} <{url}>`_";
