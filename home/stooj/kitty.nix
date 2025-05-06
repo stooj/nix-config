@@ -9,6 +9,7 @@
     };
     settings = {
       cursor_trail = 2;
+      cursor_trail_start_threshold = 0;
     };
     shellIntegration.enableBashIntegration = true;
 
