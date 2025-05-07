@@ -20,6 +20,9 @@
     # Editor plugins and configurations
     ./plugins/editor/treesitter.nix
 
+    # Documentation
+    ./plugins/documentation/neorg.nix
+
     # LSP and formatting
     ./plugins/lsp/conform.nix
     ./plugins/lsp/fidget.nix
