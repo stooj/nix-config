@@ -2,6 +2,7 @@
 {
   imports = [
     ./bash.nix
+    ./direnv.nix
     ./flameshot.nix
     ./git.nix
     ./gpg.nix
