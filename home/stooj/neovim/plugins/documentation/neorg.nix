@@ -3,29 +3,31 @@
   programs.mr.settings."code/docs/wiki" = {
     checkout = "git clone 'git@code.ginstoo.net:stooj/wiki.git'";
   };
-  programs.nixvim.plugins.neorg = {
-    enable = true;
-    modules = {
-      "core.defaults" = {
-        __empty = null;
-      };
-      "core.completion" = {
-        config = {
-          engine = "nvim-cmp";
+  programs.nixvim = {
+    plugins.neorg = {
+      enable = true;
+      modules = {
+        "core.defaults" = {
+          __empty = null;
         };
-      };
-      "core.concealer" = {
-        config = {
-          icon_preset = "diamond";
-        };
-      };
-
-      "core.dirman" = {
-        config = {
-          workspaces = {
-            wiki = "~/code/docs/wiki";
+        "core.completion" = {
+          config = {
+            engine = "nvim-cmp";
           };
-          default_workspace = "wiki";
+        };
+        "core.concealer" = {
+          config = {
+            icon_preset = "diamond";
+          };
+        };
+
+        "core.dirman" = {
+          config = {
+            workspaces = {
+              wiki = "~/code/docs/wiki";
+            };
+            default_workspace = "wiki";
+          };
         };
       };
     };
