@@ -1,4 +1,6 @@
 { ... }:
 {
-  programs.nixvim.plugins.neorg.enable = true;
+  programs.nixvim.plugins.neorga = {
+    enable = true;
+  };
 }
