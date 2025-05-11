@@ -11,6 +11,7 @@
           textwidth = 0;
           wrap = true;
           breakindent = true;
+          breakindentopt = "shift:2";
           linebreak = true;
         };
       };
