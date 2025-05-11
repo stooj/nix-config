@@ -14,6 +14,12 @@
           engine = "nvim-cmp";
         };
       };
+      "core.concealer" = {
+        config = {
+          icon_preset = "diamond";
+        };
+      };
+
       "core.dirman" = {
         config = {
           workspaces = {
