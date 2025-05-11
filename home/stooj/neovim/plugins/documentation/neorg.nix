@@ -4,6 +4,14 @@
     checkout = "git clone 'git@code.ginstoo.net:stooj/wiki.git'";
   };
   programs.nixvim = {
+    files = {
+      "ftplugin/norg.lua" = {
+        localOpts = {
+          conceallevel = 2;
+        };
+      };
+    };
+
     plugins.neorg = {
       enable = true;
       modules = {
