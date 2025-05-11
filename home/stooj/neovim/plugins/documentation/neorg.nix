@@ -33,13 +33,19 @@
             icon_preset = "diamond";
           };
         };
-
         "core.dirman" = {
           config = {
             workspaces = {
               wiki = "~/code/docs/wiki";
             };
             default_workspace = "wiki";
+          };
+        };
+        "core.esupports.metagen" = {
+          config = {
+            type = "auto";
+            timezone = "utc";
+            update_date = true;
           };
         };
       };
