@@ -9,6 +9,7 @@
         localOpts = {
           conceallevel = 2;
           textwidth = 0;
+          wrap = true;
         };
       };
     };
