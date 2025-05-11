@@ -7,6 +7,9 @@
     ./search.nix
     ./settings.nix
 
+    # Filetype-specific settings
+    ./filetypes/markdown.nix
+
     # Gui settings
     ./neovide.nix
 
