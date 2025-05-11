@@ -1,6 +1,6 @@
 { ... }:
 {
-  programs.nixvim.plugins.neorga = {
+  programs.nixvim.plugins.neorg = {
     enable = true;
     modules = {
       "core.defaults" = {
