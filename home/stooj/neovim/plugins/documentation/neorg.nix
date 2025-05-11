@@ -11,6 +11,14 @@
           engine = "nvim-cmp";
         };
       };
+      "core.dirman" = {
+        config = {
+          workspaces = {
+            wiki = "~/code/docs/wiki";
+          };
+          default_workspace = "wiki";
+        };
+      };
     };
   };
 }
