@@ -8,6 +8,7 @@
       "ftplugin/norg.lua" = {
         localOpts = {
           conceallevel = 2;
+          textwidth = 0;
         };
       };
     };
