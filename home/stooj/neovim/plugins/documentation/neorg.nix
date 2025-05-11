@@ -6,6 +6,11 @@
       "core.defaults" = {
         __empty = null;
       };
+      "core.completion" = {
+        config = {
+          engine = "nvim-cmp";
+        };
+      };
     };
   };
 }

@@ -32,6 +32,7 @@
         {
           name = "nvim_lsp";
         }
+        { name = "neorg"; }
       ];
     };
   };
