@@ -1,5 +1,8 @@
 { ... }:
 {
+  programs.mr.settings."code/docs/wiki" = {
+    checkout = "git clone 'git@code.ginstoo.net:stooj/wiki.git'";
+  };
   programs.nixvim.plugins.neorg = {
     enable = true;
     modules = {
