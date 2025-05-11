@@ -10,6 +10,7 @@
           conceallevel = 2;
           textwidth = 0;
           wrap = true;
+          breakindent = true;
           linebreak = true;
         };
       };
