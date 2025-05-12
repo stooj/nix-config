@@ -48,6 +48,9 @@
             update_date = true;
           };
         };
+        "core.summary" = {
+          __empty = null;
+        };
       };
     };
   };
