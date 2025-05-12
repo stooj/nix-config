@@ -48,6 +48,11 @@
             update_date = true;
           };
         };
+        "core.journal" = {
+          config = {
+            strategy = "nested";
+          };
+        };
         "core.summary" = {
           __empty = null;
         };
