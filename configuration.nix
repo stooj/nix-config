@@ -119,6 +119,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    elinks
     fd
     git
     nextcloud-client
