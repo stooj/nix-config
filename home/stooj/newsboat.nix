@@ -34,6 +34,9 @@
       {
         url = "\"query:This Month:age < 31\"";
       }
+      {
+        url = "\"query:Breaking news:age < 2\"";
+      }
     ];
   };
 }
