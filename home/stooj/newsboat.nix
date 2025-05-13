@@ -21,6 +21,7 @@
 
       # External tools
       browser "TERM=xterm-256color ${lib.getExe pkgs.elinks}"
+      macro q set browser "${lib.getExe pkgs.qutebrowser}"; open-in-browser; set browser "TERM=xterm-256color ${lib.getExe pkgs.elinks}"
     '';
     urls = [
       {
