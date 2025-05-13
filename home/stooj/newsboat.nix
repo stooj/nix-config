@@ -17,6 +17,8 @@
       bind-key k up
       bind-key l open
       bind-key h quit
+
+      # External tools
       browser "TERM=xterm-256color ${lib.getExe pkgs.elinks}"
     '';
     urls = [
