@@ -17,7 +17,7 @@
       bind-key k up
       bind-key l open
       bind-key h quit
-      browser TERM=xterm-256color "${lib.getExe pkgs.elinks}"
+      browser "TERM=xterm-256color ${lib.getExe pkgs.elinks}"
     '';
     urls = [
       {
