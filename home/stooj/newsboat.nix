@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, lib, ... }:
 {
   programs.newsboat = {
     enable = true;
@@ -17,6 +17,7 @@
       bind-key k up
       bind-key l open
       bind-key h quit
+      browser "${lib.getExe pkgs.elinks}"
     '';
     urls = [
       {
