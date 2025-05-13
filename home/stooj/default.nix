@@ -14,6 +14,7 @@
     ./mr.nix
     ./neovim
     ./neovide.nix
+    ./newsboat.nix
     ./password-store.nix
     ./preferences.nix
     ./qutebrowser.nix
