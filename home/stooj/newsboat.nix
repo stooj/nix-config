@@ -32,7 +32,7 @@
         ];
       }
       {
-        url = "query:ThisMonth:age < 31";
+        url = "query:ThisMonth:\"age < 31\"";
       }
     ];
   };
