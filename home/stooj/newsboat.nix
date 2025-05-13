@@ -31,6 +31,9 @@
           "development"
         ];
       }
+      {
+        url = "query:ThisMonth:age < 31";
+      }
     ];
   };
 }
