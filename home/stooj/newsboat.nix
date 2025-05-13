@@ -18,5 +18,19 @@
       bind-key l open
       bind-key h quit
     '';
+    urls = [
+      {
+        url = "https://vhyrro.github.io/rss.xml";
+        title = "Vhyrro's Digital Garden";
+        tags = [
+          "lua"
+          "neovim"
+          "neorg"
+          "lux"
+          "luarocks"
+          "development"
+        ];
+      }
+    ];
   };
 }
