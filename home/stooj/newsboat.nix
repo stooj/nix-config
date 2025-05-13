@@ -17,6 +17,7 @@
       bind-key k up
       bind-key l open
       bind-key h quit
+      bind-key \ macro-prefix
 
       # External tools
       browser "TERM=xterm-256color ${lib.getExe pkgs.elinks}"
