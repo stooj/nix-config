@@ -125,6 +125,7 @@
     git
     nextcloud-client
     ripgrep
+    tree
   ];
 
   programs.gnupg.agent = {
