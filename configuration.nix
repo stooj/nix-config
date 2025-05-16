@@ -120,6 +120,7 @@
 
   environment.systemPackages = with pkgs; [
     bitwarden-desktop
+    direnv
     elinks
     fd
     git
