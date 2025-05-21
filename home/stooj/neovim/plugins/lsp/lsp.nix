@@ -17,6 +17,9 @@
     servers = {
       biome = {
         enable = true;
+        settings = {
+          workspace_required = true;
+        };
       };
       nil_ls.enable = true;
       marksman.enable = true;
