@@ -18,7 +18,7 @@
       biome = {
         enable = true;
         settings = {
-          workspace_required = true;
+          workspace_required = false;
         };
       };
       nil_ls.enable = true;
