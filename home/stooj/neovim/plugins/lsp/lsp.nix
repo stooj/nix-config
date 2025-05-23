@@ -15,12 +15,6 @@
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
-      biome = {
-        enable = true;
-        settings = {
-          workspace_required = false;
-        };
-      };
       nil_ls.enable = true;
       marksman.enable = true;
       harper_ls = {
