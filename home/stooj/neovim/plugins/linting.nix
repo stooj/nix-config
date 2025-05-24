@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.nixvim = {
     extraPackages = with pkgs; [
@@ -8,6 +8,9 @@
       enable = true;
       lintersByFt = {
         css = [ "csslint" ];
+      };
+      linters = {
+        csslint.cmd = lib.getExe pkgs.csslint;
       };
     };
   };
