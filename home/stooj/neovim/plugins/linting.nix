@@ -2,15 +2,15 @@
 {
   programs.nixvim = {
     extraPackages = with pkgs; [
-      csslint
+      biome
     ];
     plugins.lint = {
       enable = true;
       lintersByFt = {
-        css = [ "csslint" ];
+        css = [ "biomejs" ];
       };
       linters = {
-        csslint.cmd = lib.getExe pkgs.csslint;
+        biomejs.cmd = lib.getExe pkgs.biome;
       };
     };
   };
