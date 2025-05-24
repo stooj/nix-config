@@ -6,6 +6,7 @@
     ];
     plugins.lint = {
       enable = true;
+      autoCmd.event = "InsertLeave";
       lintersByFt = {
         css = [ "biomejs" ];
       };
