@@ -11,8 +11,8 @@
         settings = {
           ["harper-ls"] = {
             linters = {
-              sentence_capitalization = false,
-              spell_check = false
+              SentenceCapitalization = false,
+              SpellCheck = false
             }
           }
         }
