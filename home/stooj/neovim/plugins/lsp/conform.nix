@@ -16,6 +16,7 @@
           };
         };
         formatters_by_ft = {
+          css = [ "biome" ];
           htmldjango = [ "djlint" ];
           markdown = [ "prettierd" ];
           nix = [ "nixfmt" ];
