@@ -22,6 +22,9 @@
       enable = true;
       servers = {
         harper_ls.enable = true;
+        jinja_lsp = {
+          enable = true;
+        };
         marksman.enable = true;
         nil_ls.enable = true;
         superhtml.enable = true;
