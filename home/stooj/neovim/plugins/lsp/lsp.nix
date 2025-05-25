@@ -1,6 +1,11 @@
 { ... }:
 {
   programs.nixvim = {
+    diagnostic.settings = {
+      virtual_lines = {
+        current_line = true;
+      };
+    };
     extraConfigLua = ''
         require('lspconfig').harper_ls.setup {
         settings = {
