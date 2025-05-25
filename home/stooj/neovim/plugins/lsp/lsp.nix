@@ -18,6 +18,7 @@
       harper_ls.enable = true;
       marksman.enable = true;
       nil_ls.enable = true;
+      superhtml.enable = true;
       stylelint_lsp.enable = true;
     };
   };
