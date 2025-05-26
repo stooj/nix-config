@@ -5,6 +5,9 @@
       enable = true;
       settings = {
         backend = "kitty";
+        integrations = {
+          neorg.enabled = true;
+        };
       };
     };
   };
