@@ -24,7 +24,7 @@
     ./plugins/editor/treesitter.nix
 
     # Documentation
-    ./plugins/documentation/neorg.nix
+    # ./plugins/documentation/neorg.nix
 
     # LSP and formatting
     ./plugins/linting.nix
