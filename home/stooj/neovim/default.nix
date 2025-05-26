@@ -26,6 +26,12 @@
     # Documentation
     ./plugins/documentation/neorg.nix
 
+    # LSP and formatting
+    ./plugins/linting.nix
+    ./plugins/lsp/conform.nix
+    ./plugins/lsp/fidget.nix
+    ./plugins/lsp/lsp.nix
+
     # Snippets
     ./plugins/snippets/luasnip.nix
 
