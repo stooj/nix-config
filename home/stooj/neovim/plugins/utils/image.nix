@@ -3,6 +3,8 @@
   programs.nixvim = {
     extraPackages = with pkgs; [ imagemagick ];
     extraLuaPackages = ps: [ ps.magick ];
-    plugins.image.enable = true;
+    plugins.image = {
+      enable = true;
+    };
   };
 }
