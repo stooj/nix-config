@@ -1,4 +1,7 @@
 { ... }:
 {
-  programs.nixvim.plugins.image.enable = true;
+  programs.nixvim = {
+    dependencies.imagemagick.enable = true;
+    plugins.image.enable = true;
+  };
 }
