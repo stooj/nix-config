@@ -5,6 +5,9 @@
     extraLuaPackages = ps: [ ps.magick ];
     plugins.image = {
       enable = true;
+      settings = {
+        backend = "kitty";
+      };
     };
   };
 }
