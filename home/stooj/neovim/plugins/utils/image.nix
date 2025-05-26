@@ -1,7 +1,7 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
-    dependencies.imagemagick.enable = true;
+    extraPackages = with pkgs; [ imagemagick ];
     extraLuaPackages = ps: [ ps.magick ];
     plugins.image.enable = true;
   };
