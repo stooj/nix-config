@@ -26,7 +26,14 @@
     # Documentation
     ./plugins/documentation/neorg.nix
 
+    # Snippets
+    ./plugins/snippets/luasnip.nix
+
     # Utils
     ./plugins/utils/image.nix
+    ./plugins/utils/lastplace.nix
+    ./plugins/utils/mini.nix
+    ./plugins/utils/telescope.nix
+    ./plugins/utils/which-key.nix
   ];
 }
