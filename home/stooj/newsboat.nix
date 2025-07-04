@@ -37,6 +37,16 @@
         ];
       }
       {
+        url = "https://www.geraldinelikestowrite.com/blog-feed.xml";
+        title = "Geraldine likes to write";
+        tags = [
+          "writing"
+          "blog"
+          "fiction"
+          "speculative"
+        ];
+      }
+      {
         url = ''"query:This Month:age < 31"'';
       }
       {
